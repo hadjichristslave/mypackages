@@ -29,6 +29,10 @@ class ValidpackServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		//
+		$this->app['validpack'] = $this->app->share(function($app)
+        {
+            return new Validpack;
+        });
 	}
 
 	/**
@@ -38,7 +42,7 @@ class ValidpackServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('validpack');
 	}
 
 }

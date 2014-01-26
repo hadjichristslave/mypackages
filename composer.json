@@ -14,7 +14,10 @@
     },
     "autoload": {
         "classmap": [
-            "src/migrations"
+            "src/migrations",
+            "src/models",
+            "src/views",
+            "src/controllers"
         ],
         "psr-0": {
             "Slave\\Validpack\\": "src/"
