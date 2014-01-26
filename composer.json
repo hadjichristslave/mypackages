@@ -1,7 +1,6 @@
 {
     "name": "slave/validpack",
-    "description": "Model validate package, uses the laravel validation class, rulles must be passed as 
-    as a variable to the model",
+    "description": "Model validate package, uses the laravel validation class, rulles must be passed as as a variable to the model",
     "authors": [
         {
             "name": "panagiotis",
