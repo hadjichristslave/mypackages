@@ -1,5 +1,6 @@
 <?php namespace Slave\Validpack;
 use View;
+use Validator;
 class Validpack {
 
 	public function foo(){
@@ -11,14 +12,12 @@ class Validpack {
 	* 
 	*/
 	public static function validateoperation(&$obj){
-		$rules = $obj->rules;
+		$rules    = $obj->rules;
 		$data     = array();
 		foreach($rules as $key=>$val){
 			$data[$key] = $obj->$key;
 		}
 		$validator = Validator::make($data,$rules);
-		if($validator->passes())
-			return true;
-		return $validator->errors();
+		return $validator;
 	}	 
 }
